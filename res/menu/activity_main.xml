@@ -20,5 +20,10 @@
         android:orderInCategory="100"
         android:showAsAction="always"
         android:title="@string/menu_send_data"/>
+    <item
+        android:id="@+id/menu_consent"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_consent"/>
 
 </menu>
