@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bevara</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="edit_message">Please edit the message</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="go_to_pics">Photographs</string>
+    <string name="title_activity_interact_pics">Interact with Pictures</string>
+    <string name="menu_pictures">Photographs</string>
+    <string name="menu_videos">Videos</string>
+    <string name="menu_send_data">Send Data</string>
+    <string name="menu_voice_recordings">Voice Recordings</string>
+    <string name="title_activity_take_picture">Take Picture</string>
+    <string name="picture_cheese">Cheeeeese</string>
+    <string name="take_pic">Take a picture!</string>
+
+</resources>

@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_pictures"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_pictures"/>
+    <item
+        android:id="@+id/menu_videos"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_videos"/>
+    <item
+        android:id="@+id/menu_voice_recordings"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_voice_recordings"/>
+    <item
+        android:id="@+id/menu_send_data"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/menu_send_data"/>
+
+</menu>
