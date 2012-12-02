@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kentonmurray.bevara"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black" >
+        <activity
+            android:name="com.kentonmurray.bevara.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kentonmurray.bevara.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName="com.kentonmurray.bevara.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kentonmurray.bevara.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.kentonmurray.bevara.pics.InteractPicsActivity"
+            android:label="@string/title_activity_interact_pics"
+            android:parentActivityName="com.kentonmurray.com.bevara" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kentonmurray.com.bevara" />
+        </activity>
+        <activity
+            android:name="com.kentonmurray.bevara.pics.TakePictureActivity"
+            android:label="@string/title_activity_take_picture" 
+            android:parentActivityName="com.kentonmurray.com.bevara.pics" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kentonmurray.com.bevara" />
+        </activity>
+    </application>
+
+</manifest>
