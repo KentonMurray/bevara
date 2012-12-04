@@ -7,9 +7,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
-    
+
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -47,11 +49,37 @@
         </activity>
         <activity
             android:name="com.kentonmurray.bevara.pics.TakePictureActivity"
-            android:label="@string/title_activity_take_picture" 
+            android:label="@string/title_activity_take_picture"
             android:parentActivityName="com.kentonmurray.com.bevara.pics" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kentonmurray.com.bevara" />
+        </activity>
+        <activity
+            android:name="com.kentonmurray.bevara.pics.ViewPicsActivity"
+            android:label="@string/title_activity_view_pics" >
+        </activity>
+        <activity
+            android:name="com.kentonmurray.bevara.voice.InteractVoiceActivity"
+            android:label="@string/title_activity_interact_voice" >
+        </activity>
+        <!--
+        <activity
+            android:name="com.kentonmurray.bevara.voice.RecordVoiceActivity"
+            android:label="@string/title_activity_record_voice" >
+        </activity>
+        -->
+        <activity
+            android:name="com.kentonmurray.bevara.GetConsentActivity"
+            android:label="@string/title_activity_get_consent" >
+        </activity>
+        <activity
+            android:name="com.kentonmurray.bevara.pics.InsertTextActivity"
+            android:label="@string/title_activity_insert_text" >
+        </activity>
+        <activity
+            android:name="com.kentonmurray.bevara.pics.DisplaySourceLangActivity"
+            android:label="@string/title_activity_display_source_lang" >
         </activity>
     </application>
 

@@ -10,6 +10,7 @@ import com.kentonmurray.bevara.R;
 import com.kentonmurray.bevara.R.layout;
 import com.kentonmurray.bevara.R.menu;
 
+import android.location.Location;
 import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.net.Uri;
@@ -36,7 +37,9 @@ public class TakePictureActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_take_picture);
-
+		Location gps_loc;
+		String gps_string = "";
+		
 		CheckEnableGPS();
 
 		LocationManager locationManager = (LocationManager) this
@@ -47,6 +50,15 @@ public class TakePictureActivity extends Activity {
 			if (gps_enabled) {
 				LocationProvider provider = locationManager
 						.getProvider(LocationManager.GPS_PROVIDER);
+				//Toast.makeText(TakePictureActivity.this,"GPS Enabled: " + provider, Toast.LENGTH_LONG).show();
+				gps_loc=locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+				gps_string = gps_loc.toString();
+				//Display it on the screen
+				TextView textView = new TextView(this);
+				textView.setTextSize(40);
+				textView.setText(gps_string);
+				setContentView(textView);
+				Thread.sleep(2000);
 			}
 		} catch (Exception ex) {
 		}
@@ -168,6 +180,17 @@ public class TakePictureActivity extends Activity {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			//Display for 2 seconds
+			//try {
+				//Thread.sleep(2000);
+			//} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+			//}
+			
+			//Annotate it
+			annotateCurrentPic();
 		}
 
 	}
@@ -189,6 +212,12 @@ public class TakePictureActivity extends Activity {
 		String imageFileName = "BEVARA" + timeStamp + "_";
 		File image = File.createTempFile(imageFileName, ".jpg", getAlbumDir());
 		// mCurrentPhotoPath = image.getAbsolutePath();
+		
+		//TextView textView = new TextView(this);
+		//textView.setTextSize(40);
+		//textView.setText(imageFileName);
+		//setContentView(textView);
+		
 		return image;
 	}
 
@@ -201,6 +230,13 @@ public class TakePictureActivity extends Activity {
 																							 * )
 																							 */
 				"Bevara");
+		
+		
 		return storageDir;
 	}
+	
+	public void annotateCurrentPic()  {
+    	Intent intent = new Intent(this, InsertTextActivity.class);
+    	startActivity(intent);
+    }
 }

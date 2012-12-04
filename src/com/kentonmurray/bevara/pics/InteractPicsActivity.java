@@ -1,8 +1,8 @@
 package com.kentonmurray.bevara.pics;
 
 import com.kentonmurray.bevara.R;
-import com.kentonmurray.bevara.R.layout;
-import com.kentonmurray.bevara.R.menu;
+//import com.kentonmurray.bevara.R.layout;
+//import com.kentonmurray.bevara.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -10,11 +10,12 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.support.v4.app.NavUtils;
 
 public class InteractPicsActivity extends Activity {
-
+	//public final static String EXTRA_MESSAGE = "com.kentonmurray.bevara.pics.MESSAGE";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -61,10 +62,24 @@ public class InteractPicsActivity extends Activity {
 
 	public void goToTakePic(View view)  {
     	Intent intent = new Intent(this, TakePictureActivity.class);// InteractPicsActivity.class);
+    	//EditText editText = (EditText) findViewById(R.id.edit_src);
+    	//String message = editText.getText().toString();
+    	//intent.putExtra("kenton", message);
+        startActivity(intent);
+    }
+	
+	 /** Takes the user to the part of the app to view Pictures */
+    public void goToViewPics(View view)  {
+    	Intent intent = new Intent(this, ViewPicsActivity.class);
     	//EditText editText = (EditText) findViewById(R.id.edit_message);
     	//String message = editText.getText().toString();
     	//intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+    }
+    
+    public void annotatePic(View view)  {
+    	Intent intent = new Intent(this, InsertTextActivity.class);
+    	startActivity(intent);
     }
 	
 }

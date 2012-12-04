@@ -1,6 +1,7 @@
 package com.kentonmurray.bevara;
 
 import com.kentonmurray.bevara.pics.InteractPicsActivity;
+import com.kentonmurray.bevara.voice.InteractVoiceActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -53,21 +54,20 @@ public class MainActivity extends Activity {
             case R.id.menu_pictures:
             	intent = new Intent(this, InteractPicsActivity.class);
             	startActivity(intent);
-            	//goToPics();
                 return true;
             case R.id.menu_send_data:
             	intent = new Intent(this, InteractPicsActivity.class);
             	startActivity(intent);
-                //goToPics();
                 return true;
             case R.id.menu_voice_recordings:
-            	intent = new Intent(this, InteractPicsActivity.class);
+            	intent = new Intent(this, InteractVoiceActivity.class);
             	startActivity(intent);
-            	//goToPics();
             case R.id.menu_videos:
             	intent = new Intent(this, InteractPicsActivity.class);
             	startActivity(intent);
-            	//goToPics();
+            case R.id.menu_consent:
+            	intent = new Intent(this, GetConsentActivity.class);
+            	startActivity(intent);
             default:
                 return super.onOptionsItemSelected(item);
         }
