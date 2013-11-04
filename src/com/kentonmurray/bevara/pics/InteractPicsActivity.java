@@ -28,7 +28,7 @@ public class InteractPicsActivity extends Activity {
 		
 		setContentView(R.layout.activity_interact_pics);
 		
-//		TextView textView = new TextView(this);
+////		TextView textView = new TextView(this);
 	//    textView.setTextSize(40);
 	  //  textView.setText("Pics area");
 	    //setContentView(textView);
